@@ -33,3 +33,23 @@ function App() {
 }
 
 export default App
+
+/*
+src/
+├── components/
+│   ├── JobListingApp.jsx
+│   ├── SearchBar.jsx
+│   ├── FilterPanel.jsx
+│   ├── JobCard.jsx
+│   └── JobListingApp.css
+├── data/
+│   └── jobListings.js
+├── Header/
+│   └── Header.jsx
+└── Newsfeed.jsx
+*/
+
+
+/*
+https://x.com/i/grok/share/mKDdx0GXcwbGJY62sX8FLniTO
+*/
