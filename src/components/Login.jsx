@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 
@@ -9,13 +9,13 @@ const Login = () => {
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     try {
-      await login(email, password);
+      login(email, password);
       navigate('/newsfeed');
     } catch (err) {
-      setError(err.response?.data?.message || 'Login failed.');
+      setError(err.message);
     }
   };
 
@@ -34,6 +34,7 @@ const Login = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              aria-label="Email address"
             />
           </div>
           <div className="w3-margin-bottom">
@@ -45,6 +46,7 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
+              aria-label="Password"
             />
           </div>
           <button type="submit" className="btn btn-dark w3-block">

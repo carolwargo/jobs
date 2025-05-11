@@ -49,6 +49,16 @@ const jobListings = [
     description: "Experienced barber for men’s grooming services. Must be skilled in fades and beard trims.",
     postedDate: "2025-04-15",
   },
+  {
+    id: 6,
+    title: "Spa Manager",
+    company: "Serenity Spa",
+    location: "Los Angeles, CA",
+    jobType: "Full-time",
+    salary: "$60,000 - $80,000",
+    description: "Manage daily operations of a luxury spa. Experience in beauty industry and leadership required.",
+    postedDate: "2025-04-10",
+  },
 ];
 
 export default jobListings;

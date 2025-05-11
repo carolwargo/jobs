@@ -1,37 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useParams } from 'react-router-dom';
 import jobListings from '../data/jobListings';
 
 const JobDetails = () => {
   const { id } = useParams();
-  const [job, setJob] = useState(null);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchJob = async () => {
-      try {
-        const response = await axios.get(`http://localhost:5000/api/jobs/${id}`);
-        setJob(response.data);
-      } catch (err) {
-        console.error('Error fetching job:', err);
-        setError('Failed to load job details.');
-        // Fallback to dummy data
-        const dummyJob = jobListings.find((j) => j.id === parseInt(id));
-        if (dummyJob) {
-          setJob(dummyJob);
-          setError(null);
-        }
-      }
-    };
-    fetchJob();
-  }, [id]);
-
-  if (error) {
-    return <div className="w3-center w3-text-red">{error}</div>;
-  }
+  const job = jobListings.find((j) => j.id === parseInt(id));
 
   if (!job) {
-    return <div className="w3-center w3-padding">Loading...</div>;
+    return <div className="w3-center w3-padding">Job not found.</div>;
   }
 
   return (

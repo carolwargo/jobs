@@ -1,10 +1,43 @@
 /* Global styles for the app */
 .w3-theme-l5 {
-  background-color: #f4f5f7; /* Matches Newsfeed.jsx background */
-  min-height: 100vh; /* Full viewport height */
+  background-color: #f4f5f7; /* Matches Newsfeed.jsx */
+  min-height: 100vh;
 }
 
-/* Ensure container has consistent padding */
+/* Consistent container padding */
 .w3-container {
   padding: 16px;
+}
+
+/* Buttons and inputs */
+.btn.btn-dark {
+  background-color: #333;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.btn.btn-dark:hover {
+  background-color: #555;
+}
+
+.form-control.w3-round {
+  border: none !important; /* Borderless like ReactQuill */
+  border-radius: 4px !important;
+  padding: 8px;
+}
+
+/* Card styling */
+.w3-card.w3-white.w3-round {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Links */
+.w3-text-blue {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.w3-text-blue:hover {
+  text-decoration: underline;
 }

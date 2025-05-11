@@ -1,5 +1,3 @@
-import React from 'react';
-
 const FilterPanel = ({ filters, setFilters }) => {
   const jobTypes = ['', 'Full-time', 'Part-time', 'Contract'];
   const locations = ['', 'New York, NY', 'Los Angeles, CA', 'Miami, FL', 'Chicago, IL'];
@@ -16,6 +14,7 @@ const FilterPanel = ({ filters, setFilters }) => {
         value={filters.jobType}
         onChange={handleFilterChange}
         className="toolbar-btn w3-round"
+        aria-label="Filter by job type"
       >
         <option value="">All Job Types</option>
         {jobTypes.slice(1).map((type) => (
@@ -29,6 +28,7 @@ const FilterPanel = ({ filters, setFilters }) => {
         value={filters.location}
         onChange={handleFilterChange}
         className="toolbar-btn w3-round"
+        aria-label="Filter by location"
       >
         <option value="">All Locations</option>
         {locations.slice(1).map((loc) => (

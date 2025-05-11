@@ -1,5 +1,4 @@
-import React from 'react';
-import { FaSearch } from 'react-icons/fa';
+import  { FaSearch } from 'react-icons/fa';
 
 const SearchBar = ({ searchQuery, setSearchQuery }) => {
   return (
@@ -11,6 +10,7 @@ const SearchBar = ({ searchQuery, setSearchQuery }) => {
         placeholder="Search jobs (e.g., Hairdresser, Makeup Artist)"
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
+        aria-label="Search jobs by title or description"
       />
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 
@@ -10,13 +10,13 @@ const Register = () => {
   const { register } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     try {
-      await register(name, email, password);
+      register(name, email, password);
       navigate('/newsfeed');
     } catch (err) {
-      setError(err.response?.data?.message || 'Registration failed.');
+      setError(err.message);
     }
   };
 
@@ -35,6 +35,7 @@ const Register = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
+              aria-label="Full name"
             />
           </div>
           <div className="w3-margin-bottom">
@@ -46,6 +47,7 @@ const Register = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              aria-label="Email address"
             />
           </div>
           <div className="w3-margin-bottom">
@@ -57,6 +59,7 @@ const Register = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
+              aria-label="Password"
             />
           </div>
           <button type="submit" className="btn btn-dark w3-block">
