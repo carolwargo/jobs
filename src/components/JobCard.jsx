@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const JobCard = ({ job }) => {
   return (
-    <div className="w3-card w3-white w3-round w3-margin px-3 py-2">
+    <div className="w3-card w3-white w3-round w3-margin p-3">
       <h3>{job.title}</h3>
       <p className="w3-text-grey">{job.company}</p>
       <p><strong>Location:</strong> {job.location}</p>

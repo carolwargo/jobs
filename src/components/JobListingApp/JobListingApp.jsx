@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './JobListingApp.css';
-import SearchBar from './SearchBar';
-import FilterPanel from './FilterPanel';
-import JobCard from './JobCard';
-import jobListings from '../data/jobListings';
+// Removed unused imports
+import SearchBar from '../SearchBar';
+import FilterPanel from '../FilterPanel';
+import JobCard from '../JobCard';
+import jobListings from '../../data/jobListings';
 
 const JobListingApp = () => {
   const [jobs] = useState(jobListings);
@@ -24,9 +25,9 @@ const JobListingApp = () => {
   });
 
   return (
-    <div className="w3-container">
-      <h2 className="w3-center w3-margin-top">Beauty Professionals Job Listings</h2>
-      <div className="w3-card w3-white w3-round w3-margin px-3 py-2">
+    <div className="w3-container w3-padding-small">
+      <h2 className="w3-center w3-margin-top">Job Listings</h2>
+      <div className="w3-card w3-white w3-round w3-margin p-3">
         <div className="d-flex flex-column my-3">
           <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
           <FilterPanel filters={filters} setFilters={setFilters} />

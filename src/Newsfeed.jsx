@@ -4,7 +4,9 @@ import 'react-quill/dist/quill.snow.css';
 import Header from './Header/Header';
 import GirlCamera from './assets/images/GirlCamera.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './components/JobListingApp.css'; // Reuse for consistent styling
+import './components/JobListingApp/JobListingApp.css';
+
+
 import {
   FaImage,
   FaVideo,

@@ -1,0 +1,195 @@
+/* Search bar container */
+.search-bar {
+ display: flex;
+ align-items: center;
+ padding: 8px;
+ background-color: #fff; /* Matches w3-card w3-white */
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow like w3-card */
+ border-radius: 4px; /* Matches w3-round */
+ margin-bottom: 16px; /* Matches w3-margin-bottom */
+}
+
+/* Search input */
+.search-bar .search-input {
+ border: none !important; /* Borderless, overrides Bootstrap */
+ border-radius: 4px;
+ padding: 8px 8px 8px 12px; /* Extra padding for icon */
+ font-size: 1rem;
+ width: 100%;
+ caret-color: #343a40; /* Matches btn-dark */
+ background-color: transparent; /* No background to blend with .search-bar */
+ transition: box-shadow 0.2s, background-color 0.2s;
+}
+
+.search-bar .search-input:focus {
+ outline: none;
+ box-shadow: 0 0 0 3px rgba(52, 58, 64, 0.3); /* Stronger shadow for focus */
+ background-color: #f8f9fa; /* Light gray, matches w3-theme-l5 */
+}
+
+.search-bar .search-input:hover {
+ background-color: #f8f9fa; /* Subtle hover effect */
+}
+
+.search-bar .search-input::placeholder {
+ color: #999;
+ font-style: italic;
+}
+
+.search-bar .search-input::selection {
+ background: rgba(52, 58, 64, 0.2); /* Selection color matching btn-dark */
+}
+
+/* Search icon */
+.search-bar .search-icon {
+ color: #999;
+ font-size: 1.2rem; /* Slightly larger for visibility */
+}
+
+/* Screen reader only */
+.sr-only {
+ position: absolute;
+ width: 1px;
+ height: 1px;
+ padding: 0;
+ margin: -1px;
+ overflow: hidden;
+ clip: rect(0, 0, 0, 0);
+ border: 0;
+}
+
+/* Filter panel */
+.filter-panel {
+ display: flex;
+ gap: 8px;
+}
+
+.filter-panel .toolbar-btn {
+ display: inline-flex;
+ align-items: center;
+ padding: 6px 12px;
+ background-color: #f1f1f1;
+ border: 1px solid #ddd;
+ border-radius: 4px;
+ color: #333;
+ font-size: 1rem;
+ cursor: pointer;
+ transition: background-color 0.2s;
+}
+
+.filter-panel .toolbar-btn:hover {
+ background-color: #e0e0e0;
+}
+
+.filter-panel .toolbar-btn:focus {
+ outline: 2px solid #007bff;
+ outline-offset: 2px;
+}
+
+/* Job list */
+.job-list {
+ display: flex;
+ flex-direction: column;
+ gap: 16px;
+}
+
+/* Newsfeed styles */
+.w3-container .ql-container.form-control.w3-round {
+ border: none !important;
+ border-radius: 4px !important;
+ background-color: #fff;
+}
+
+.w3-container .ql-editor {
+ min-height: 80px;
+ padding: 8px;
+}
+
+.w3-container .ql-editor::before {
+ color: #999;
+ font-style: italic;
+}
+
+.w3-container .toolbar {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ gap: 8px;
+ margin-top: 8px;
+ margin-bottom: 8px;
+}
+
+.w3-container .toolbar-left {
+ display: flex;
+ gap: 8px;
+}
+
+.w3-container .toolbar-btn {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ padding: 6px 12px;
+ background-color: #f1f1f1;
+ border: 1px solid #ddd;
+ border-radius: 4px;
+ color: #333;
+ font-size: 1.1rem;
+ cursor: pointer;
+ transition: background-color 0.2s;
+}
+
+.w3-container .toolbar-btn:hover {
+ background-color: #e0e0e0;
+}
+
+.w3-container .toolbar-btn:focus {
+ outline: 2px solid #007bff;
+ outline-offset: 2px;
+}
+
+.w3-container .preview-container {
+ position: relative;
+ margin-top: 8px;
+ margin-bottom: 8px;
+}
+
+.w3-container .preview-container img,
+.w3-container .preview-container video {
+ max-width: 100%;
+ max-height: 150px;
+ border-radius: 4px;
+}
+
+.w3-container .flex-grow-1 {
+ flex-grow: 1 !important;
+ width: 100%;
+}
+
+/* Bootstrap compatibility */
+.d-flex.gap-2 {
+ display: flex;
+ gap: 8px;
+}
+
+.mt-2 {
+ margin-top: 0.5rem !important;
+}
+
+/* Profile picture styling */
+.w3-container .profile-pic {
+ object-fit: cover;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+ .filter-panel {
+ flex-direction: column;
+ }
+ .search-bar .search-input {
+ font-size: 0.9rem;
+ }
+ .w3-container .toolbar {
+ flex-direction: column;
+ align-items: flex-start;
+ }
+}

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { AuthContext } from './AuthContext';
 import users from '../data/users';
+
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -15,6 +16,7 @@ export const AuthProvider = ({ children }) => {
         name: foundUser.name,
         email: foundUser.email,
         appliedJobs: foundUser.appliedJobs,
+        profilePic: foundUser.profilePic, // Added profilePic
       });
       return true;
     }
@@ -32,9 +34,16 @@ export const AuthProvider = ({ children }) => {
       email,
       password,
       appliedJobs: [],
+      profilePic: "https://i.pravatar.cc/150?img=1", // Default profile pic for new users
     };
     users.push(newUser); // Simulate adding to "database"
-    setUser({ id: newUser.id, name, email, appliedJobs: [] });
+    setUser({
+      id: newUser.id,
+      name,
+      email,
+      appliedJobs: [],
+      profilePic: newUser.profilePic, // Added profilePic
+    });
     return true;
   };
 

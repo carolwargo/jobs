@@ -1,17 +1,20 @@
 import { useContext } from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 import { AuthContext } from '../context/AuthContext';
+
 
 const Header = () => {
   const { user, logout } = useContext(AuthContext);
 
   return (
+  
     <Navbar bg="light" expand="lg" className="w3-card w3-white w3-round w3-margin-bottom">
       <Navbar.Brand href="/" className="w3-margin-left">
         Beauty Jobs
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
+      <Navbar.Toggle aria-controls="basic-navbar-nav"  className="w3-margin-right"/>
+      <Navbar.Collapse id="basic-navbar-nav" >
+          <Container>
         <Nav className="ms-auto w3-margin-right">
           <Nav.Link href="/jobs" aria-label="Go to jobs page">
             Jobs
@@ -46,8 +49,10 @@ const Header = () => {
             </>
           )}
         </Nav>
+        </Container>
       </Navbar.Collapse>
     </Navbar>
+
   );
 };
 

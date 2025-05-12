@@ -3,8 +3,9 @@ const users = [
     id: 1,
     name: "Alice Smith",
     email: "alice@example.com",
-    password: "password123", // Plaintext for dummy purposes
-    appliedJobs: [1, 3], // IDs of jobs applied to
+    password: "password123",
+    appliedJobs: [1, 3],
+    profilePic: "https://i.pravatar.cc/150?img=2", // Placeholder image
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ const users = [
     email: "bob@example.com",
     password: "password123",
     appliedJobs: [2],
+    profilePic: "https://i.pravatar.cc/150?img=3",
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ const users = [
     email: "claire@example.com",
     password: "password123",
     appliedJobs: [4, 5],
+    profilePic: "https://i.pravatar.cc/150?img=6",
   },
 ];
 

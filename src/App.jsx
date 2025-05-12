@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { AuthProvider } from './context/AuthContext';
+import { AuthProvider } from './context/AuthProvider';
+// No change needed for AuthProvider import
 import Header from './Header/Header';
-import JobListingApp from './components/JobListingApp';
+import JobListingApp from './components/JobListingApp/JobListingApp';
 import JobDetails from './components/JobDetails';
 import Newsfeed from './Newsfeed';
 import Login from './components/Login';
