@@ -1,13 +1,14 @@
 import { useContext } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { AuthContext } from '../context/AuthContext';
-
+import AppBar from '../components/Nav/AppBar';
 
 const Header = () => {
   const { user, logout } = useContext(AuthContext);
 
   return (
-  
+  <div>
+    <AppBar/>
     <Navbar bg="light" expand="lg" className="w3-card w3-white w3-round w3-margin-bottom">
       <Navbar.Brand href="/" className="w3-margin-left">
         Beauty Jobs
@@ -52,7 +53,7 @@ const Header = () => {
         </Container>
       </Navbar.Collapse>
     </Navbar>
-
+</div>
   );
 };
 

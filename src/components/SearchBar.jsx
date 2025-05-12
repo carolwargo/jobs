@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { FaSearch } from 'react-icons/fa';
+//import { FaSearch } from 'react-icons/fa';
 
 const SearchBar = ({ searchQuery, setSearchQuery }) => {
  const inputRef = useRef(null);
@@ -10,10 +10,11 @@ const SearchBar = ({ searchQuery, setSearchQuery }) => {
 
  return (
  <div className="search-bar d-flex align-items-center w3-margin-bottom">
- <FaSearch
+ {/*<FaSearch
  className="w3-margin-right search-icon"
  style={{ marginLeft: '8px' }}
  />
+ */}
  <input
  type="text"
  className="form-control w3-round search-input"

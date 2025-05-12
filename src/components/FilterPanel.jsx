@@ -9,14 +9,15 @@ const FilterPanel = ({ filters, setFilters }) => {
 
   return (
     <div className="filter-panel d-flex gap-2">
-      <select
-        name="jobType"
-        value={filters.jobType}
-        onChange={handleFilterChange}
-        className="toolbar-btn w3-round"
-        aria-label="Filter by job type"
-      >
-        <option value="">All Job Types</option>
+<select
+  name="jobType"
+  value={filters.jobType}
+  onChange={handleFilterChange}
+  onFocus={() => console.log('Job Type dropdown focused')}
+  className="toolbar-btn w3-round"
+  aria-label="Filter by job type"
+>
+        <option value="" >All Job Types</option>
         {jobTypes.slice(1).map((type) => (
           <option key={type} value={type}>
             {type}
@@ -27,6 +28,7 @@ const FilterPanel = ({ filters, setFilters }) => {
         name="location"
         value={filters.location}
         onChange={handleFilterChange}
+          onFocus={() => console.log('Location dropdown focused')}
         className="toolbar-btn w3-round"
         aria-label="Filter by location"
       >
