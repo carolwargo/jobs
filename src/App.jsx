@@ -17,7 +17,7 @@ import BottomAppBar from './components/Nav/BottomAppBar';
 function App() {
   return (
     <AuthProvider>
-      <Router>
+      <Router basename='/jobs'>
         <div className="w3-theme-l5">
           <Header />
           <Routes>
