@@ -9,7 +9,7 @@ const SearchBar = ({ searchQuery, setSearchQuery }) => {
  }, []);
 
  return (
- <div className="search-bar d-flex align-items-center w3-margin-bottom">
+ <div className="search-bar d-flex align-items-center w3-margin-bottom p-3">
  {/*<FaSearch
  className="w3-margin-right search-icon"
  style={{ marginLeft: '8px' }}

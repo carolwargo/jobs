@@ -12,6 +12,7 @@ import Register from './components/Register';
 import Profile from './components/Profile';
 import ProtectedRoute from './components/ProtectedRoute';
 import NotFound from './components/NotFound';
+import BottomAppBar from './components/Nav/BottomAppBar';
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
             {/* Fallback for unknown routes */}
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <BottomAppBar />
         </div>
       </Router>
     </AuthProvider>

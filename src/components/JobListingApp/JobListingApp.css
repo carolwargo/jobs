@@ -242,3 +242,58 @@
   margin-right: 0.5rem;
   font-weight: bold;
 }
+
+
+/* New styles for separate scroll bars */
+.job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  padding-right: 8px; /* Space for scrollbar */
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.job-details-container {
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  padding-right: 8px; /* Space for scrollbar */
+  position: sticky;
+  top: 20px;
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Ensure the parent row supports side-by-side columns */
+.row {
+  margin: 0;
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+/* Custom scrollbar styling (WebKit browsers) */
+.job-list::-webkit-scrollbar,
+.job-details-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.job-list::-webkit-scrollbar-thumb,
+.job-details-container::-webkit-scrollbar-thumb {
+  background-color: #ced4da;
+  border-radius: 4px;
+}
+
+.job-list::-webkit-scrollbar-track,
+.job-details-container::-webkit-scrollbar-track {
+  background-color: #f8f9fa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .job-list {
+    max-height: calc(100vh - 200px); /* Adjust for mobile header/footer */
+  }
+  .job-details-container {
+    display: none; /* Already hidden via Bootstrap */
+  }
+}
