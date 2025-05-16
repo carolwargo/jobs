@@ -2,11 +2,12 @@
 import { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './JobListingApp.css';
-import SearchBar from '../SearchBar';
-import FilterPanel from '../FilterPanel';
-import JobCard from '../JobCard';
-import JobDetails from '../JobDetails';
+
+import FilterPanel from '../JobsComponents/FilterPanel';
+import JobCard from '../JobsComponents/JobCard';
+import JobDetails from '../JobsComponents/JobDetails';
 import jobListings from '../../data/jobListings';
+import SearchBar from '../JobsComponents/SearchBar';
 import { FaSearch } from 'react-icons/fa'; // Importing the search icon
 
 const JobListingApp = () => {

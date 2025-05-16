@@ -2,8 +2,8 @@
 // ./components/JobDetails.jsx
 import { useParams, useNavigate } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
-import jobListings from '../data/jobListings';
-import ApplyNowModal from './ApplyNowModal'; // <-- Import it
+import jobListings from '../../data/jobListings';
+import ApplyNowModal from '../ApplyNowModal'; // <-- Import it
 import { useState } from 'react';
 
 const JobDetails = ({ job: propJob, onClose }) => {
